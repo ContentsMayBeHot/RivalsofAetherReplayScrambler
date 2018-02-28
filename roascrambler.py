@@ -6,6 +6,11 @@ REPLAYS_DNAME = 'replays'
 OUTPUT_DNAME = 'scrambled'
 
 def main():
+    if not os.path.isdir(REPLAYS_DNAME):
+        os.mkdir(REPLAYS_DNAME)
+    if not os.path.isdir(OUTPUT_DNAME):
+        os.mkdir(OUTPUT_DNAME)
+    
     args = sys.argv
     if len(args) < 2:
         return
